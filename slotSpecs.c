@@ -32,7 +32,7 @@ if(strcmp(player->currentPosition,"City")==0){
 }
 }
 
-char Four[5] = "four", down[3] = "DT", up[3] = "UT", right[3] = "RT", left[3] = "LT", Two[4] = "two"; // used for strcmp with slot char values assigned in slotAdj.c
+char Four[5] = "four", down[3] = "DT", up[3] = "UT", right[3] = "RT", left[3] = "LT", Two[4] = "two"; 
 
 
 void slotAdj(struct slot ** board){
@@ -66,7 +66,7 @@ void slotAdj(struct slot ** board){
 
 int checkAdjSlot(struct slot **board, int slotRow, int slotColm){ // function prints possible oves to player making it easier to decide where to move
 
-    if(strcmp(board[slotRow][slotColm].adj,Four)==0){ // board.adj value assigned in slotAdj.c prints available slots to move to if players current slot has four avaliable slots to moove to
+    if(strcmp(board[slotRow][slotColm].adj,Four)==0){ 
 
         printf("\nYou have four adjacent slots, possible moves are: ");
         printf("Up (%d, %d, %s), ", slotRow-1,slotColm, board[slotRow-1][slotColm].slotType);
